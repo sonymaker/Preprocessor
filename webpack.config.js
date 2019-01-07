@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    mode:   'development',
+    mode: 'development',
     entry: path.join(__dirname, 'src/index.js'),
     output: {
         path: path.join(__dirname, 'public'),
@@ -10,7 +10,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'public'),
-		watchContentBase: true,
+        watchContentBase: true,
         //host: '0.0.0.0',
         port: 4000,
         inline: true,
@@ -30,6 +30,14 @@ module.exports = {
                         plugins: ['react-hot-loader/babel']
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpg|svg|eot|ttf|woff|woff2)$/,
+                use: ['file-loader']
             }
         ]
     },

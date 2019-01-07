@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import LoginPage from './pages/LoginPage'
-import { hot } from 'react-hot-loader'
 
 /**********************************************************
  * Airbnb React/JSX Style Guide
@@ -9,29 +7,25 @@ import { hot } from 'react-hot-loader'
  **********************************************************/
 
 const propTypes = {
-    id: PropTypes.string.isRequired
-
+    
 }
 
 const defaultProps = {
 
 }
 
-class App extends Component {
-    constructor() {
-        super()
-    }
-
+class Edit_Box extends Component {
     render() {
         return (
-            <div id={this.props.id}>
-                <LoginPage id="loginPage1" />
+            <div className="edit_box">
+                <button className="edit_ico"></button>
+                <button className="delete_ico"></button>
             </div>
         )
     }
 }
 
-App.propTypes = propTypes
-App.defaultProps = defaultProps
+Edit_Box.propTypes = propTypes
+Edit_Box.defaultProps = defaultProps
 
-export default hot(module)(App)
+export default Edit_Box
