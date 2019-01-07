@@ -37,7 +37,13 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg)$/,
-                use: ['file-loader']
+                //use: ['file-loader']
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        publicPath: './dist/'
+                    }
+                }
             }
         ]
     },
