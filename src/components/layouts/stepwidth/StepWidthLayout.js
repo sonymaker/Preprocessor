@@ -24,10 +24,6 @@ class StepWidthLayout extends Component {
     }
 
     render() {
-        let step_spangroup_info = [
-
-        ]
-
         return (
             <div id={this.props.id} className="cont_section_step fl">
                 <div className="step_list fl">
