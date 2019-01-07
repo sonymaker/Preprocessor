@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Edit_Box from './components/Edit_Box'
 import Step_SpanGroup from './components/Step_SpanGroup'
-import '../../../css/common.css'
-import '../../../css/style_blackSkin_layout.css'
+import '../../../../css/common.css'
+import '../../../../css/style_blackSkin_layout.css'
 
 /**********************************************************
  * Airbnb React/JSX Style Guide
