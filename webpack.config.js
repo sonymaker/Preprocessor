@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     entry: path.join(__dirname, 'src/index.js'),
     output: {
-        path: path.join(__dirname, 'public/dist'),
+        path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
     },
     devServer: {
@@ -37,12 +37,13 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg)$/,
-                //use: ['file-loader']
                 use: {
-                    loader: 'file-loader',
+                    loader: 'file-loader'
+                    /*,
                     options: {
                         publicPath: './dist/'
                     }
+                    */
                 }
             }
         ]
